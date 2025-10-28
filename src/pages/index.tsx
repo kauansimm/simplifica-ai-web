@@ -1,5 +1,8 @@
 import { NavBar } from '@/components/content/nav-bar'
-import { createFileRoute, Link } from '@tanstack/react-router'
+import { createFileRoute } from '@tanstack/react-router'
+import { MainDiv } from '@/components/theme/main-div'
+import { Header } from './_components/header'
+import { ChevronDownScroll } from './_components/chevron-down-scroll'
 
 export const Route = createFileRoute('/')({
   component: RouteComponent,
@@ -7,13 +10,14 @@ export const Route = createFileRoute('/')({
 
 function RouteComponent() {
   return (
-    <div className='max-w-[1200px] mx-auto min-h-[200vh]'>
-      <NavBar />
-      <main className='px-6'>
-        <h1>
-          Main
-        </h1>
-      </main>
+    <div className='bg-primary'>
+      <MainDiv
+        className='min-h-screen content-between py-4'
+      >
+        <NavBar />
+        <Header />
+        <ChevronDownScroll />
+      </MainDiv>
     </div>
   )
 }

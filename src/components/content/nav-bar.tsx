@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 
 export function NavBar() {
   return (
-    <nav className="flex sticky justify-between p-4 items-center">
+    <nav className="flex mx-auto w-full bg-white shadow-sm rounded-2xl justify-between p-4 items-center">
       <a
         href="/"
         className="font-raleway font-bold text-primary text-xl flex items-center gap-2"
@@ -33,7 +33,6 @@ export function NavBar() {
         </Button>
         <Button
           variant={"outline"}
-          className="hover:bg-green hover:text-white hover:border-green hover:shadow-sm"
         >
           <LogIn />
           Entrar
